@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
-    <title>Hasintha Nirmal | GitHub Profile</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <title>Hasintha Nirmal - GitHub Profile</title>
     <style>
         * {
             margin: 0;
@@ -28,6 +29,7 @@
         header {
             text-align: center;
             margin-bottom: 3rem;
+            position: relative;
         }
 
         .profile-img {
@@ -37,6 +39,7 @@
             border: 4px solid #238636;
             margin-bottom: 1rem;
             animation: float 3s ease-in-out infinite;
+            object-fit: cover;
         }
 
         @keyframes float {
@@ -51,10 +54,29 @@
             margin-bottom: 0.5rem;
         }
 
-        .title {
+        .location {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            color: #8b949e;
+            margin-bottom: 1rem;
+        }
+
+        .company {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            color: #8b949e;
+            margin-bottom: 1rem;
+        }
+
+        .bio {
             color: #8b949e;
             font-size: 1.2rem;
             margin-bottom: 1rem;
+            font-style: italic;
         }
 
         .stats {
@@ -70,10 +92,12 @@
             border-radius: 6px;
             text-align: center;
             transition: transform 0.3s;
+            min-width: 150px;
         }
 
         .stat-item:hover {
             transform: translateY(-5px);
+            background: #1f2937;
         }
 
         .stat-number {
@@ -93,16 +117,28 @@
             background: #161b22;
             border-radius: 6px;
             padding: 1.5rem;
-            transition: transform 0.3s;
+            transition: all 0.3s;
+            border: 1px solid #30363d;
         }
 
         .project-card:hover {
             transform: translateY(-5px);
+            border-color: #58a6ff;
         }
 
         .project-title {
             color: #58a6ff;
             margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .project-description {
+            color: #8b949e;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
         }
 
         .skills {
@@ -118,80 +154,184 @@
             padding: 0.25rem 0.75rem;
             border-radius: 15px;
             font-size: 0.9rem;
+            transition: transform 0.2s;
+        }
+
+        .skill-tag:hover {
+            transform: scale(1.05);
         }
 
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 1rem;
+            gap: 1.5rem;
             margin-top: 2rem;
         }
 
         .social-link {
             color: #8b949e;
             text-decoration: none;
-            transition: color 0.3s;
+            transition: all 0.3s;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
         .social-link:hover {
             color: #58a6ff;
+            transform: translateY(-2px);
+        }
+
+        .typing-text {
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            color: #58a6ff;
+            font-size: 1.2rem;
+        }
+
+        .join-date {
+            color: #8b949e;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .section-title {
+            color: #58a6ff;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background: #238636;
+            border-radius: 3px;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <img src="https://avatars.githubusercontent.com/u/Hasintha-Nirmal?v=4" alt="Profile Picture" class="profile-img">
+            <img src="https://avatars.githubusercontent.com/u/75412702?v=4" alt="Hasintha Nirmal" class="profile-img">
             <h1 class="name">Hasintha Nirmal</h1>
             <div class="typing-text">
                 <span id="typed-text"></span>
             </div>
-            <p class="title">Open Source Enthusiast | Python Developer | Bot Creator</p>
+            <div class="company">
+                <i class="fas fa-building"></i>
+                <span>Eastern Developers</span>
+            </div>
+            <div class="location">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Sri Lanka</span>
+            </div>
+            <p class="bio">"Still Learning"</p>
             <div class="stats">
                 <div class="stat-item">
-                    <div class="stat-number">2+</div>
+                    <div class="stat-number">46</div>
                     <div>Repositories</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">120+</div>
-                    <div>Commits</div>
+                    <div class="stat-number">4</div>
+                    <div>Followers</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">50+</div>
-                    <div>Followers</div>
+                    <div class="stat-number">24</div>
+                    <div>Following</div>
                 </div>
             </div>
         </header>
 
+        <h2 class="section-title">Featured Projects</h2>
         <div class="projects">
             <div class="project-card">
-                <h3 class="project-title">Telegram Session Generator</h3>
-                <p>Generate Telegram session strings for creating bots or running scripts with Pyrogram.</p>
-                <a href="https://github.com/Hasintha-Nirmal/Telegram-session-generator" class="social-link">View Project</a>
+                <h3 class="project-title">
+                    <i class="fas fa-download"></i>
+                    HN-Downloader
+                </h3>
+                <p class="project-description">A powerful and efficient downloader application with advanced features and user-friendly interface.</p>
+                <div class="skills">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">UI/UX</span>
+                    <span class="skill-tag">Network</span>
+                </div>
             </div>
             <div class="project-card">
-                <h3 class="project-title">HN-Downloader</h3>
-                <p>A Telegram bot for downloading from torrents, Google Drive, Telegram files, and more. Upload to various destinations including Google Drive.</p>
-                <a href="https://github.com/Hasintha-Nirmal/HN-Downloader" class="social-link">View Project</a>
+                <h3 class="project-title">
+                    <i class="fab fa-telegram"></i>
+                    Telegram-session-generator
+                </h3>
+                <p class="project-description">Automated tool for generating Telegram sessions with enhanced security features.</p>
+                <div class="skills">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Telegram API</span>
+                    <span class="skill-tag">Security</span>
+                </div>
             </div>
         </div>
 
         <div class="social-links">
-            <a href="https://github.com/Hasintha-Nirmal" class="social-link">GitHub</a>
-            <a href="#" class="social-link">LinkedIn</a>
+            <a href="https://github.com/Hasintha-Nirmal" class="social-link">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+            </a>
+            <a href="mailto:contact@example.com" class="social-link">
+                <i class="fas fa-envelope"></i>
+                <span>Contact</span>
+            </a>
         </div>
+
+        <p class="join-date">
+            <i class="fas fa-calendar-alt"></i>
+            Joined GitHub on December 3, 2020
+        </p>
     </div>
 
     <script>
+        // Initialize Typed.js
         new Typed('#typed-text', {
             strings: [
-                'Building awesome bots',
-                'Contributing to open source',
-                'Simplifying automation'
+                'Software Developer',
+                'Open Source Contributor',
+                'Problem Solver',
+                'Continuous Learner'
             ],
             typeSpeed: 50,
             backSpeed: 30,
             loop: true
+        });
+
+        // Add animation to project cards on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'all 0.5s ease-out';
+            observer.observe(card);
         });
     </script>
 </body>
