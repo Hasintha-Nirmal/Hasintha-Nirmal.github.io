@@ -1,4 +1,4 @@
-I'll create a professional and dynamic GitHub profile page with animations and interactive elements.
+Professional and dynamic GitHub profile page with animations and interactive elements.
 
 
 
